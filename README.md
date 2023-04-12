@@ -1,2 +1,2 @@
 # project5
-project rom my formation 
+project from my formation 
