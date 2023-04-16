@@ -29,22 +29,21 @@ let intervalId;
 function showSlide(slideIndex) {
   bannerImg.src = "./assets/images/slideshow/" + slides[slideIndex].image;
   bannerTagline.innerHTML = slides[slideIndex].tagLine;
-  bannerImg.classList.add('active');
-  bannerTagline.classList.add('active');
   dots[currentSlide].classList.remove('dot_selected');
   dots[slideIndex].classList.add('dot_selected');
   currentSlide = slideIndex;
 }
-/* this ternaire shorten this code: 
+/*-----  this ternaire shorten this code: -----------
    if (nextSlideIndex >= slides.length) {
 	nextSlideIndex = 0;
   }
   //  same for the  function just after
+  ----------------------------------------------------
 */
 function nextSlide() {
     let nextSlideIndex = currentSlide + 1;
 	stopCarousel();
-	showSlide(nextSlideIndex >= slides.length?nextSlideIndex = 0:nextSlideIndex);
+	showSlide(nextSlideIndex >= slides.length ? nextSlideIndex = 0:nextSlideIndex);
     console.log("Right" + nextSlideIndex);
 	startCarousel();
 }
