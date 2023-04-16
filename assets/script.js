@@ -35,23 +35,26 @@ function showSlide(slideIndex) {
   dots[slideIndex].classList.add('dot_selected');
   currentSlide = slideIndex;
 }
-
-function nextSlide() {
-  let nextSlideIndex = currentSlide + 1;
-  if (nextSlideIndex >= slides.length) {
+/* this ternaire shorten this code: 
+   if (nextSlideIndex >= slides.length) {
 	nextSlideIndex = 0;
   }
-  console.log("Right" + nextSlideIndex)
-  showSlide(nextSlideIndex);
+  //  same for the  function just after
+*/
+function nextSlide() {
+    let nextSlideIndex = currentSlide + 1;
+	stopCarousel();
+	showSlide(nextSlideIndex >= slides.length?nextSlideIndex = 0:nextSlideIndex);
+    console.log("Right" + nextSlideIndex);
+	startCarousel();
 }
 
 function previousSlide(){
 	let previousSlideIndex = currentSlide -1;
-	if(previousSlideIndex < 0 ){
-		previousSlideIndex = slides.length -1;
-	}
-	console.log("Left" + previousSlideIndex)
-	showSlide(previousSlideIndex);
+	stopCarousel();
+	showSlide(previousSlideIndex < 0 ? previousSlideIndex = slides.length-1 : previousSlideIndex);
+	console.log("Left" + previousSlideIndex);
+	startCarousel()
   }
 
 function startCarousel() {
