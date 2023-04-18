@@ -54,7 +54,7 @@ function previousSlide(){
 	showSlide(previousSlideIndex < 0 ? previousSlideIndex = slides.length-1 : previousSlideIndex);
 	console.log("Left" + previousSlideIndex);
 	startCarousel()
-  }
+}
 
 function startCarousel() {
   intervalId = setInterval(nextSlide, 5000);
