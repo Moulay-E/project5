@@ -85,9 +85,7 @@ arrow_left.addEventListener('click', () => {
 showSlide(currentSlide);
 startCarousel();
 
-
-
-//code test
+//end
 
 
 
