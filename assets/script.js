@@ -70,6 +70,7 @@ dots.forEach((dot, index) => {
 	showSlide(index);
 	stopCarousel();
 	startCarousel();
+	
   });
 });
 
@@ -86,6 +87,3 @@ showSlide(currentSlide);
 startCarousel();
 
 //end
-
-
-
